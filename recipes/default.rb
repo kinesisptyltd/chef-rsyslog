@@ -14,4 +14,4 @@ service "rsyslog" do
   action [:enable, :start]
 end
 
-include_recipe "rsyslog::papertrail" if node["rsyslog"]["papertrail"]
+include_recipe "rsyslog::papertrail" if node["rsyslog"]["papertrail"]["enabled"]
