@@ -14,4 +14,9 @@ service "rsyslog" do
   action [:enable, :start]
 end
 
+template "/etc/logrotate.d/rsyslog" do
+  source "logrotate.erb"
+  mode "0644"
+end
+
 include_recipe "rsyslog::papertrail" if node["rsyslog"]["papertrail"]["enabled"]
