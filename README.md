@@ -29,3 +29,22 @@ Just include `rsyslog` in your node's `run_list`:
   ]
 }
 ```
+
+# Dev Setup
+
+```
+brew cask update
+brew cask install chefdk
+chef exec bundle install
+brew install docker docker-machine # need virtual box first
+docker-machine create --driver virtualbox default
+
+# as required set env variables for docker
+eval $(docker-machine env default)
+
+kitchen converge
+kitchen verify # run tests
+
+# ssh in
+kitchen login
+```
