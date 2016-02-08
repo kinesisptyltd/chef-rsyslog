@@ -21,4 +21,10 @@ describe "rsyslog::default" do
     it { should be_enabled }
     it { should be_running }
   end
+
+  describe file("/etc/rsyslog.d/100-papertrail-test.conf") do
+    it { should be_a_file }
+    its(:content) { should include "if $programname contains 'dummyprogram'" }
+  end
+
 end

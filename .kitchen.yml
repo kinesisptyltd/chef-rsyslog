@@ -13,4 +13,5 @@ suites:
     run_list:
       - recipe[rsyslog::default]
       - recipe[rsyslog::papertrail]
+      - recipe[rsyslog::provider_test]
     attributes:
