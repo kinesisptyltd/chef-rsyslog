@@ -24,7 +24,7 @@ describe "rsyslog::default" do
 
   describe file("/etc/rsyslog.d/100-papertrail-test.conf") do
     it { should be_a_file }
-    its(:content) { should include "if $programname contains 'dummyprogram'" }
+    its(:content) { should include "if $msg contains 'dummyprogram'" }
   end
 
 end
