@@ -18,6 +18,8 @@ None
 
 ### rsyslog_papertrail_program_log
 
+### rsyslog_papertrail_file_log
+
 ## Usage
 
 Just include `rsyslog` in your node's `run_list`:
