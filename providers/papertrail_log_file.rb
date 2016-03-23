@@ -6,6 +6,7 @@ action :create do
     source new_resource.source
     cookbook new_resource.cookbook
     variables(
+      "name" => new_resource.name,
       "file" => new_resource.file,
       "host" => new_resource.host,
       "port" => new_resource.port,
