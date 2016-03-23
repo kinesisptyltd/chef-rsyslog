@@ -5,5 +5,3 @@ input(type="imfile"
       Tag="<%= @name %>"
       Severity="<%= @severity %>"
       Facility="<%= @facility %>")
-
-if $rawmsg contains '<%= @name %>' then <%= "@" if node["rsyslog"]["papertrail"]["tls"] %>@<%= @host %>.papertrailapp.com:<%= @port %>

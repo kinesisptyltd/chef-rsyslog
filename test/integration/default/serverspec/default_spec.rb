@@ -24,14 +24,12 @@ describe "rsyslog::default" do
 
   describe file("/etc/rsyslog.d/100-papertrail-test.conf") do
     it { is_expected.to be_a_file }
-    its(:content) { is_expected.to include "if $rawmsg contains 'dummyprogram'" }
+    its(:content) { is_expected.to include "or $rawmsg contains 'dummyprogram'" }
   end
 
-  describe file("/etc/rsyslog.d/100-papertrail-testfile-file.conf") do
+  describe file("/etc/rsyslog.d/99-papertrail-testfile-file.conf") do
     it { is_expected.to be_a_file }
 
-    its(:content) { is_expected.to include "$InputFileTag testfile:" }
-    its(:content) { is_expected.to include "$InputFileName /var/log/syslog" }
-    its(:content) { is_expected.to include "local3.* @localhost.papertrailapp.com:1234" }
+    its(:content) { is_expected.to include "File=\"/var/log/syslog\"" }
   end
 end
