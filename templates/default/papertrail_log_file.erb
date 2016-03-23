@@ -6,6 +6,6 @@ $InputFileTag <%= @name %>:
 $InputFileStateFile <%= @name %>
 $InputFileFacility <%= @facility %>
 $InputRunFileMonitor
-$InputFilePollingInterval <%= @polling_interval %>
+$InputFilePollInterval <%= @polling_interval %>
 
 <%= @facility %>.* <%= "@" if node["rsyslog"]["papertrail"]["tls"] %>@<%= @host %>.papertrailapp.com:<%= @port %>
