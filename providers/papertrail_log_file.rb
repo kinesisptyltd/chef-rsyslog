@@ -11,6 +11,7 @@ action :create do
       "host" => new_resource.host,
       "port" => new_resource.port,
       "facility" => new_resource.facility,
+      "severity" => new_resource.severity,
       "polling_interval" => new_resource.polling_interval
     )
     action :create
