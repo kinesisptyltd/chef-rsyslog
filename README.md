@@ -1,5 +1,3 @@
-[![Circle CI](https://circleci.com/gh/kinesisptyltd/chef-rsyslog.svg?style=svg)](https://circleci.com/gh/kinesisptyltd/chef-rsyslog)
-
 # chef-rsyslog
 
 Setup `rsyslog` on Ubuntu and Debian

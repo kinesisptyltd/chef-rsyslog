@@ -1,10 +1,10 @@
 environments:
-  development:
+  chef:
     pipelines:
       - chef-rsyslog
 pipelines:
   chef-rsyslog:
-    group: development
+    group: chef
     materials:
       gitMaterial1:
         git: git@github.com:kinesisptyltd/chef-rsyslog.git
